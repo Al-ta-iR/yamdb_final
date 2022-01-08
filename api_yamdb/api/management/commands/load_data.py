@@ -3,8 +3,9 @@ import os
 
 from django.core.management import BaseCommand
 
-from reviews.models import Category, Comment, Genre, Review, Title
-from users.models import User
+from reviews.models import (Category, Comment, Genre, Review,  # isort:skip
+                            Title)
+from users.models import User  # isort:skip
 
 
 class Command(BaseCommand):

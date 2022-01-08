@@ -1,8 +1,9 @@
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 
-from users import views as user_views
 from . import views
+
+from users import views as user_views  # isort:skip
 
 router_v1 = DefaultRouter()
 

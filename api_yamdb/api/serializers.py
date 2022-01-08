@@ -1,7 +1,8 @@
 from django.core import exceptions
 from rest_framework import serializers
 
-from reviews.models import Category, Comment, Genre, Review, Title
+from reviews.models import (Category, Comment, Genre, Review,  # isort:skip
+                            Title)
 
 
 class CategorySerializer(serializers.ModelSerializer):

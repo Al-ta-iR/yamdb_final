@@ -1,13 +1,13 @@
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters, permissions, viewsets
-from rest_framework import mixins
+from rest_framework import filters, mixins, permissions, viewsets
 
-from reviews.models import Review, Title, Category, Genre
 from . import serializers
 from .filters import TitleFilter
 from .permissions import IsAdminOrReadOnly, IsAuthorOrStaffOrReadOnly
+
+from reviews.models import Review, Title, Category, Genre  # isort:skip
 
 
 class CreateDestroyViewSet(mixins.CreateModelMixin,
